@@ -11,15 +11,20 @@ import thumbsup from "../assets/images/thumbsup.png";
     class="grid grid-cols-1 md:grid-cols-3 grid-rows-6 md:grid-rows-2 gap-6 p-6 max-w-6xl mx-auto"
   >
     <!-- Øverste venstre: fotografi 1 -->
-    <div class="col-span-1 row-span-1 flex justify-center">
+    <div class="col-span-1 row-span-1 flex justify-center group relative">
       <img
         src="/photo1.jpg"
         alt="Fotografi 1"
-        class="w-full max-w-sm object-cover"
+        class="w-full max-w-sm object-cover transition-opacity duration-300"
+      />
+      <img
+        src="/photo1hover.jpg"
+        alt="Fotografi 1 hover"
+        class="w-full max-w-sm object-cover absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
       />
     </div>
 
-    <!-- Øverste midt: navn, profilbillede, hej jeg er -->
+    <!-- Øverste midt: navn, profilbillede, hej jeg er + digital designer -->
     <div class="col-span-1 row-span-1 text-center flex flex-col items-center">
       <img src="/navn.png" alt="Navn" />
       <img
@@ -28,35 +33,30 @@ import thumbsup from "../assets/images/thumbsup.png";
         class="w-40 h-40 object-cover rounded mb-2"
       />
       <p class="font-bold">Hej jeg er</p>
+      <img src="/digitaldesigner.png" alt="Digital Designer" class="mt-2" />
     </div>
 
     <!-- Øverste højre: fotografi 2 -->
-    <div class="col-span-1 row-span-1 flex justify-center">
+    <div class="col-span-1 row-span-1 flex justify-center group relative">
       <img
         src="/photo2.jpg"
         alt="Fotografi 2"
-        class="w-full max-w-sm object-cover"
+        class="w-full max-w-sm object-cover transition-opacity duration-300"
+      />
+      <img
+        src="/photo2hover.jpg"
+        alt="Fotografi 2 hover"
+        class="w-full max-w-sm object-cover absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
       />
     </div>
 
     <!-- Nederste venstre: kompetencer -->
     <div class="col-span-1 row-span-1">
-      <h3 class="text-lg font-bold mb-2">Kompetencer</h3>
-      <ul class="space-y-2">
-        <li>Adobe Photoshop</li>
-        <li>Adobe Lightroom</li>
-        <li>Adobe Premiere Pro</li>
-        <li>Figma</li>
-        <li>Adobe InDesign</li>
-        <li>Fotografi</li>
-        <li>Videoproduktion</li>
-        <li>HTML, CSS & JS</li>
-      </ul>
+      <img src="/kompetencer.jpg" alt="kompetencer" />
     </div>
 
-    <!-- Nederste midt: Digital Designer + tekst -->
+    <!-- Nederste midt: kun brødtekst -->
     <div class="col-span-1 row-span-1 flex flex-col items-center text-center">
-      <img src="/digitaldesigner.png" alt="digitaldesigner" />
       <p class="text-sm leading-relaxed">
         Med en baggrund i fotografi har jeg udviklet et skarpt øje for æstetik,
         komposition og detaljer. Multimediedesigneruddannelsen giver mig
@@ -66,11 +66,16 @@ import thumbsup from "../assets/images/thumbsup.png";
     </div>
 
     <!-- Nederste højre: fotografi 3 -->
-    <div class="col-span-1 row-span-1 flex justify-center">
+    <div class="col-span-1 row-span-1 flex justify-center group relative">
       <img
         src="/photo3.jpg"
         alt="Fotografi 3"
-        class="w-full max-w-sm object-cover"
+        class="w-full max-w-sm object-cover transition-opacity duration-300"
+      />
+      <img
+        src="/photo3hover.jpg"
+        alt="Fotografi 3 hover"
+        class="w-full max-w-sm object-cover absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
       />
     </div>
   </main>
