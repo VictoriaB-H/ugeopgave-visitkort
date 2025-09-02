@@ -8,20 +8,22 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 <MainLayout title="Victoria Bruun-Henriksen">
   <main
-    class="grid grid-cols-1 md:grid-cols-3 grid-rows-6 md:grid-rows-2 gap-6 p-6 max-w-6xl mx-auto"
+    class="grid grid-cols-1 md:grid-cols-3 grid-rows-6 md:grid-rows-2 gap-6 p-6 max-w-6xl mx-auto min-h-screen"
   >
     <!-- Øverste venstre: fotografi 1 -->
-    <div class="col-span-1 row-span-1 flex justify-center group relative">
-      <img
-        src="/photo1.jpg"
-        alt="Fotografi 1"
-        class="w-full max-w-sm object-cover transition-opacity duration-300"
-      />
-      <img
-        src="/photo1hover.jpg"
-        alt="Fotografi 1 hover"
-        class="w-full max-w-sm object-cover absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-      />
+    <div class="col-span-1 row-span-1 flex justify-center">
+      <div class="relative w-full max-w-sm aspect-[3/4] group">
+        <img
+          src="/photo1.jpg"
+          alt="Fotografi 1"
+          class="absolute inset-0 w-100 h-100 object-cover transition-opacity duration-300"
+        />
+        <img
+          src="/photo1hover.jpg"
+          alt="Fotografi 1 hover"
+          class="absolute inset-0 w-100 h-100 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        />
+      </div>
     </div>
 
     <!-- Øverste midt: navn, profilbillede, hej jeg er + digital designer -->
@@ -30,24 +32,26 @@ import thumbsup from "../assets/images/thumbsup.png";
       <img
         src="/Profilbillede.jpg"
         alt="Profilbillede"
-        class="w-40 h-40 object-cover rounded mb-2"
+        class="w-50 h-50 object-cover rounded mb-2"
       />
       <p class="font-bold">Hej jeg er</p>
       <img src="/digitaldesigner.png" alt="Digital Designer" class="mt-2" />
     </div>
 
     <!-- Øverste højre: fotografi 2 -->
-    <div class="col-span-1 row-span-1 flex justify-center group relative">
-      <img
-        src="/photo2.jpg"
-        alt="Fotografi 2"
-        class="w-full max-w-sm object-cover transition-opacity duration-300"
-      />
-      <img
-        src="/photo2hover.jpg"
-        alt="Fotografi 2 hover"
-        class="w-full max-w-sm object-cover absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-      />
+    <div class="col-span-1 row-span-1 flex justify-center">
+      <div class="relative w-full max-w-sm aspect-[3/4] group">
+        <img
+          src="/photo2.jpg"
+          alt="Fotografi 2"
+          class="absolute inset-0 w-100 h-100 object-cover transition-opacity duration-300"
+        />
+        <img
+          src="/photo2hover.jpg"
+          alt="Fotografi 2 hover"
+          class="absolute inset-0 w-100 h-100 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        />
+      </div>
     </div>
 
     <!-- Nederste venstre: kompetencer -->
@@ -57,7 +61,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 
     <!-- Nederste midt: kun brødtekst -->
     <div class="col-span-1 row-span-1 flex flex-col items-center text-center">
-      <p class="text-sm leading-relaxed">
+      <p class="text-sm leading-relaxe p-4 rounded-xl">
         Med en baggrund i fotografi har jeg udviklet et skarpt øje for æstetik,
         komposition og detaljer. Multimediedesigneruddannelsen giver mig
         mulighed for at udvide min forståelse af visuel kommunikation ved at
@@ -66,17 +70,19 @@ import thumbsup from "../assets/images/thumbsup.png";
     </div>
 
     <!-- Nederste højre: fotografi 3 -->
-    <div class="col-span-1 row-span-1 flex justify-center group relative">
-      <img
-        src="/photo3.jpg"
-        alt="Fotografi 3"
-        class="w-full max-w-sm object-cover transition-opacity duration-300"
-      />
-      <img
-        src="/photo3hover.jpg"
-        alt="Fotografi 3 hover"
-        class="w-full max-w-sm object-cover absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-      />
+    <div class="col-span-1 row-span-1 flex justify-center">
+      <div class="relative w-full max-w-sm aspect-[3/4] group">
+        <img
+          src="/photo3.jpg"
+          alt="Fotografi 3"
+          class="absolute inset-0 w-60 h-70 object-cover transition-opacity duration-300"
+        />
+        <img
+          src="/photo3hover.jpg"
+          alt="Fotografi 3 hover"
+          class="absolute inset-0 w-60 h-70 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        />
+      </div>
     </div>
   </main>
 </MainLayout>
