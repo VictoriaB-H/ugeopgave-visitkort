@@ -1,0 +1,33 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import thumbsup from "../assets/images/thumbsup.png";
+import Heading from "../components/Heading.astro";
+---
+
+<MainLayout title="Victoria Bruun-Henriksen">
+  <main class="flex flex-col items-center pt-12 relative">
+    <img
+      src="/bog.webp"
+      alt="bog"
+      class="w-auto max-w-[50rem] object-contain"
+    />
+
+    <img
+      src="/photo3hover.jpg"
+      alt="photo3"
+      class="w-auto max-w-[20rem] object-contain absolute top-60 left-145 transform -translate-x-1/2 -translate-y-1/4"
+    />
+
+    <Heading
+      Htmlheading="h1"
+      size="large"
+      font="anton"
+      class="absolute top-12 left-1/2 transform -translate-x-1/2 text-4xl md:text-6xl text-white"
+    >
+      FOTOGRAFI
+    </Heading>
+  </main>
+</MainLayout>

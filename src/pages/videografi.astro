@@ -1,0 +1,60 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import thumbsup from "../assets/images/thumbsup.png";
+---
+
+<MainLayout title="Victoria Bruun-Henriksen">
+  <main
+    class="flex items-center justify-center min-h-screen max-w-6xl mx-auto"
+    x-data="{ showDansVideo: false }"
+  >
+    <div class="relative">
+      <!-- Hovedvideo -->
+      <video
+        src="/videodisplay.mov"
+        autoplay
+        loop
+        muted
+        playsinline
+        class="max-w-full max-h-[80vh] shadow-lg"></video>
+
+      <!-- Klikbare bokse -->
+      <div
+        @click="showDansVideo = true"
+        class="absolute top-23 left-35 w-35 h-30 bg-transparent cursor-pointer"
+      >
+      </div>
+      <div
+        @click="showDansVideo = true"
+        class="absolute top-67 left-35 w-35 h-30 bg-transparent cursor-pointer"
+      >
+      </div>
+      <div
+        @click="showDansVideo = true"
+        class="absolute top-110 left-35 w-35 h-30 bg-transparent cursor-pointer"
+      >
+      </div>
+
+      <!-- Overlay-video -->
+      <div
+        x-show="showDansVideo"
+        class="absolute top-0 left-10 flex flex-col items-end p-2"
+        x-transition
+      >
+        <button @click="showDansVideo = false" class="text-black mb-2"
+          >Luk ✕</button
+        >
+        <video
+          src="/dansvideo.mov"
+          autoplay
+          loop
+          muted
+          playsinline
+          class="w-full h-full object-cover"></video>
+      </div>
+    </div>
+  </main>
+</MainLayout>
