@@ -7,16 +7,18 @@ import Text from "../components/Text.astro";
 import Heading from "../components/Heading.astro";
 ---
 
-<MainLayout title="billedet-navn.webp">
+<MainLayout>
   <main
     class="flex-1 flex flex-col justify-start items-center p-6 max-w-6xl mx-auto gap-6 w-full"
   >
-    <!-- Øverste række: fotografi 1, navn/profilbillede, fotografi 2 -->
+    <!-- Desktop: første række (Photo1, Profilbillede, Photo2) -->
     <div
       class="flex flex-col md:flex-row w-full gap-6 justify-center items-start"
     >
-      <!-- Fotograf 1 -->
-      <div class="flex justify-center w-full md:w-1/3">
+      <!-- Photo1 (skjult på mobil) -->
+      <div
+        class="hidden md:flex justify-center w-full md:w-1/3 order-3 md:order-1"
+      >
         <div class="relative w-50 aspect-[3/4] group">
           <img
             src="/photo1.jpg"
@@ -31,8 +33,10 @@ import Heading from "../components/Heading.astro";
         </div>
       </div>
 
-      <!-- Navn, profilbillede, digital designer -->
-      <div class="flex flex-col items-center text-center w-full md:w-1/3">
+      <!-- Profilbillede + tekst -->
+      <div
+        class="flex flex-col items-center text-center w-full md:w-1/3 order-1 md:order-2"
+      >
         <div class="relative w-45 h-45 mb-2 rounded overflow-hidden group">
           <img
             src="/Profilbillede.jpg"
@@ -45,7 +49,6 @@ import Heading from "../components/Heading.astro";
             class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           />
         </div>
-
         <Heading Htmlheading="h1" size="large" font="anton">Hej jeg er</Heading>
         <img
           src="/digitaldesigner.png"
@@ -54,8 +57,10 @@ import Heading from "../components/Heading.astro";
         />
       </div>
 
-      <!-- Fotograf 2 -->
-      <div class="flex justify-center w-full md:w-1/3">
+      <!-- Photo2 (skjult på mobil) -->
+      <div
+        class="hidden md:flex justify-center w-full md:w-1/3 order-4 md:order-3"
+      >
         <div class="relative w-48 aspect-[3/4] group">
           <img
             src="/photo2.jpg"
@@ -71,22 +76,22 @@ import Heading from "../components/Heading.astro";
       </div>
     </div>
 
-    <!-- Nederste række: kompetencer, tekst, fotografi 3 -->
+    <!-- Desktop: anden række (Kompetencer, Brødtekst, Photo3) -->
     <div
       class="flex flex-col md:flex-row w-full gap-6 justify-center items-start"
     >
-      <!-- Kompetencer -->
-      <div class="flex justify-center w-full md:w-1/3">
+      <!-- Kompetencer (skjult på mobil) -->
+      <div
+        class="hidden md:flex justify-center w-full md:w-1/3 order-5 md:order-1"
+      >
         <div
           class="relative w-48 md:w-64 aspect-[4/3] overflow-hidden group rounded"
         >
-          <!-- normal -->
           <img
             src="/kompetencer.jpg"
             alt="Kompetencer"
             class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
           />
-          <!-- hover -->
           <img
             src="/kompetencerhover.png"
             alt="Kompetencer hover"
@@ -96,7 +101,9 @@ import Heading from "../components/Heading.astro";
       </div>
 
       <!-- Brødtekst -->
-      <div class="flex flex-col items-center w-full md:w-1/3">
+      <div
+        class="flex flex-col items-center w-full md:w-1/3 order-2 md:order-2"
+      >
         <Text teksttype="brødtekst">
           Med en baggrund i fotografi har jeg udviklet et skarpt øje for
           æstetik, komposition og detaljer. Multimediedesigneruddannelsen giver
@@ -105,8 +112,8 @@ import Heading from "../components/Heading.astro";
         </Text>
       </div>
 
-      <!-- Fotograf 3 -->
-      <div class="flex justify-center w-full md:w-1/3 -m-10">
+      <!-- Photo3 -->
+      <div class="flex justify-center w-full md:w-1/3 order-6 md:order-3 -m-10">
         <div class="relative w-50 aspect-[3/4] group">
           <img
             src="/photo3.jpg"
@@ -116,6 +123,38 @@ import Heading from "../components/Heading.astro";
           <img
             src="/photo3hover.jpg"
             alt="Fotografi 3 hover"
+            class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobilversion: kun Photo1 + Photo2 side om side -->
+    <div class="flex w-full gap-4 md:hidden mt-6">
+      <div class="flex-1">
+        <div class="relative w-full aspect-[3/4] group">
+          <img
+            src="/photo1.jpg"
+            alt="Fotografi 1"
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
+          />
+          <img
+            src="/photo1hover.jpg"
+            alt="Fotografi 1 hover"
+            class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          />
+        </div>
+      </div>
+      <div class="flex-1">
+        <div class="relative w-full aspect-[3/4] group">
+          <img
+            src="/photo2.jpg"
+            alt="Fotografi 2"
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
+          />
+          <img
+            src="/photo2hover.jpg"
+            alt="Fotografi 2 hover"
             class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           />
         </div>
