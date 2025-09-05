@@ -9,7 +9,7 @@ import Heading from "../components/Heading.astro";
 
 <MainLayout title="Victoria Bruun-Henriksen">
   <main
-    class="flex items-center justify-center min-h-screen max-w-6xl mx-auto"
+    class="flex items-center justify-center min-h-screen max-w-6xl mx-auto -m-20 animate-fade-up animate-once"
     x-data="{ showDansVideo: false }"
   >
     <div class="relative">
@@ -42,7 +42,7 @@ import Heading from "../components/Heading.astro";
       <!-- Overlay-video -->
       <div
         x-show="showDansVideo"
-        class="absolute top-0 left-10 flex flex-col items-end p-2"
+        class="absolute top-50 left-50 flex flex-col items-end p-2 animate-jump-in"
         x-transition
       >
         <button @click="showDansVideo = false" class="text-black mb-2"
